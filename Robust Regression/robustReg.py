@@ -107,15 +107,14 @@ class RobustRegression:
 			)
 		)
 		
-		# Note: self.initial is a 'feasible' starting point, aka Ax = b or at least ||Ax - b|| near 0
-		#, which means I let condition Ax = b to be relaxed: Ax = b + epsilon where ||epsilon|| near 0 
-		# (for most applications, this is good enough)
-		# However, it is possible to set initial starting point to be infeasible (and I am being too lazy to implement this)
-		self.initial = np.linalg.lstsq(self.A, self.y, rcond = None)[0]
-		
-		if np.allclose(self.A.dot(self.initial), self.y) is False:
-			# (Check PDF version to see what this might means for solution found)
-			print('Warning: Initial point might be infeasible')
+		# Feasible initial starting point (See PDF)
+		self.initial = np.vstack(
+			(
+				1 - self.y,
+				1,
+				np.zeros((self.param - 1, 1))
+			)
+		)
 		
 	def findSolution(self, tolerance = 1e-3, max_iter = 1000, alpha = 0.5, beta = 0.5):
 		
