@@ -113,7 +113,7 @@ class EqualityConstrained:
 			
 			Parameters:
 				initial: np.ndarray
-					Initial starting point
+					Initial starting point. It must be feasible (for this version, at least)
 				tolerance: float, positive, default 1e-3
 					Quits if Newton decrement square is less than 2*tolerance
 				max_iter: integer, positive, default: 1000
@@ -126,7 +126,8 @@ class EqualityConstrained:
 					x: is a solution to the equality constrained convex problem, x has the shape of (n, 1)
 					decrement: Newton decrement at x 
 		'''
-		assert self.A.shape[1] == initial.shape[0]
+		assert self.A.shape[1] == initial.shape[0], 'Initial starting point must be compatible with matrix A of the problem'
+		assert (self.A.dot(initial) == self.b).all(), 'Initial starting point has to be feasible'
 		x = initial
 		for _ in range(max_iter):
 			newton_step, decrement = self.getNewtonStep(x)
