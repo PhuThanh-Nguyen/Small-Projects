@@ -140,5 +140,5 @@ class RobustRegression:
 		# This means the solution might not be the optimal one.
 		# Don't worry when this happens, cvx will have a warning for user beforehand
 		if decrement**2/2 >= tolerance:
-			print(f'>> Newton decrement of solution: {decrement**2/2}')
+			print(f'>> Newton decrement of solution: {decrement}')
 		return solution[-self.param:]

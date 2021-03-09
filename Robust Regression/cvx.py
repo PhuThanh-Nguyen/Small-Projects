@@ -103,7 +103,7 @@ class EqualityConstrained:
 		vec = np.linalg.solve(mat, b)
 		
 		newton_step = vec[:n, 0].reshape((n, 1))
-		newton_decrement = np.sqrt(newton_step.T.dot(self.hess(x)).dot(newton_step))
+		newton_decrement = np.sqrt(newton_step.T.dot(self.hess(x)).dot(newton_step)).flatten()[0]
 		
 		return newton_step, newton_decrement
 	
