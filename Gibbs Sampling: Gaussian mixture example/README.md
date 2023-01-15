@@ -41,9 +41,9 @@ In the file Gibbs_sampler_mixture.R is my implementation (not very efficient) of
 In this file, the data is generated from mixture of $\mathcal{N}(-1, 0.7^2)$ and $\mathcal{N}(3, 0.7^2)$ with $\omega_1 = 2/3, \omega_2 = 1/3$
 
 The histogram of the marginal posterior for each parameter from Gibbs sampling is given below:
-<p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20mu1.png width=700 height=500> </p>
-<p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20mu2.png width=700 height=500> </p>
-<p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20sigma2.png width=700 height=500> </p>
-<p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20sqrt(sigma2).png width=700 height=500> </p>
+<p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20mu1.png width=700 height=400> </p>
+<p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20mu2.png width=700 height=400> </p>
+<p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20sigma2.png width=700 height=400> </p>
+<p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20sqrt(sigma2).png width=700 height=400> </p>
 
 The results of the Gibbs sampling are quite good, even it gives a good estimate on which sample is from which distribution and the weights $\omega = (\omega_1, \omega_2)$
