@@ -47,3 +47,5 @@ The histogram of the marginal posterior for each parameter from Gibbs sampling i
 <p align="center"> <img src=https://github.com/PhuThanh-Nguyen/Small-Projects/blob/main/Gibbs%20Sampling:%20Gaussian%20mixture%20example/Miscellaneous/Histogram%20sqrt(sigma2).png width=700 height=400> </p>
 
 The results of the Gibbs sampling are quite good, even it gives a good estimate on which sample is from which distribution and the weights $\omega = (\omega_1, \omega_2)$
+
+**Update:** Upload the MATLAB's version of this implementation. Note: The MATLAB code to generate Dirichlet distribution comes from: https://cxwangyi.wordpress.com/2009/03/18/to-generate-random-numbers-from-a-dirichlet-distribution/
